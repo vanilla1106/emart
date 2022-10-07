@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* reset - 초기화(한칸 띄우고 이거써야 오류안뜸) */
+
+*{margin: 0; padding: 0;}
+
+/* 전체적용css */
+/* 전체배경색 = 하얀색 */
+body{background: #fff;}
+/* 전체ul,li = li여백초기화 + 링크데코없애기 */
+ul,li{margin: 0; padding: 0; list-style: none;}
+/* 전체링크 = 링크밑줄없애기 + 글씨색회색 */
+a{text-decoration: none; color: #333;}
+/* 전체이미지 = 마우스올릴때 70%투명도 */
+img:hover{opacity: 0.7;}
+
+/* 레이아웃 */
+#wrap{width: 1200px; margin: 0 auto;} /*전체중앙정렬*/
+
+/* header=로고+메뉴(2개넓이 더했을떄 1200나와야함) */
+#wrap header{width: 1200px; height: 100px;}
+/* 헤더로고 = 왼쪽정렬 */
+#wrap header h1.logo{width: 300px; height: 100px; float: left;}
+/* 로고이미지(크기+위치설정) */
+#wrap header h1.logo img{width: 150px; margin-top: 25px;}
+/* 헤더메뉴전체 = 왼쪽정렬 */
+#wrap header .menu{width: 900px; height: 100px; float: left;}
+/* 헤더메뉴글씨 = 오른쪽정렬 */
+#wrap header .menu ul{margin-top: 40px; float: right;}
+/* 오른쪽안에서 글씨는다시왼쪽정렬(왼쪽기준으로60공백주기) */
+#wrap header .menu ul li{float: left; font-size: 18px; font-weight: bold; margin-left: 60px;}
+/* 메뉴글씨상호작용(글씨색변경+밑줄생성) */
+#wrap header .menu ul li a:hover,
+#wrap header .menu ul li a:focus{
+    display: block; border-bottom: 2px solid #ffc002;
+    padding-bottom: 10px; color: #7f7f7f;
+}
+
+
+/* #center=슬라이드+버튼+공지사항/배너 */
+/* center전체크기 */
+#wrap #center{width: 1200px;}
+/* 슬라이드영역 */
+#wrap #center .slide{width: 1200px; height: 363px;}
+/* 슬라이드이미지크기 */
+#wrap #center .slide img{width: 1200px; height: 363px;}
+
+/* 버튼들 */
+/* 버튼전체영역 */
+#wrap #center .btns {width: 1200px; height: 180px; border-bottom: 1px solid #999;}
+/* 버튼좌우정렬+양끝여백생성+수직중앙정렬(이미지+글씨) */
+/* 높이+패딩바텀=합쳐서180px만들기(btn이 h180임) */
+#wrap #center .btns ul{display: flex; justify-content: space-around; align-items: center;
+height: 160px; padding-bottom: 20px;}
+/* 버튼이미지모양(둥글게) */
+#wrap #center .btns ul li{width: 100px; height: 100px; border-radius: 100px; }
+/* 버튼이미지패딩(위부터 시계방향)(a태그에 이미지넣기) */
+#wrap #center .btns ul li a{padding: 0 100px 100px 0;}
+/* 버튼글씨설정(색,위치,크기,정렬,포인터설정) */
+#wrap #center .btns ul li span{display:block; margin-top: 85px; text-align: center;
+font-size: 13px; color: #706657; cursor: pointer; font-weight: bold;}
+
+
+
+/* btn버튼 */
+/* btn1(이미지경로설정+위치설정+트렌지션0.3초) */
+#wrap #center .btns ul li.btn1{background: url('../images/btn/btn-01.png')no-repeat;
+background-position: 0 0; transition: .3s;} /* x, y */
+/* btn1이미지동작(y좌표 아래로117px움직이기) */
+#wrap #center .btns ul li.btn1:hover{background-position: 0 -117px;}
+/* btn2 */
+#wrap #center .btns ul li.btn2{background: url('../images/btn/btn-02.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn2:hover{background-position: 0 -117px;}
+/* btn3 */
+#wrap #center .btns ul li.btn3{background: url('../images/btn/btn-03.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn3:hover{background-position: 0 -117px;}
+/* btn4 */
+#wrap #center .btns ul li.btn4{background: url('../images/btn/btn-04.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn4:hover{background-position: 0 -117px;}
+/* btn5 */
+#wrap #center .btns ul li.btn5{background: url('../images/btn/btn-05.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn5:hover{background-position: 0 -117px;}
+/* btn6 */
+#wrap #center .btns ul li.btn6{background: url('../images/btn/btn-06.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn6:hover{background-position: 0 -117px;}
+/* btn7 */
+#wrap #center .btns ul li.btn7{background: url('../images/btn/btn-07.png')no-repeat;
+background-position: 0 0; transition: .3s;} 
+#wrap #center .btns ul li.btn7:hover{background-position: 0 -117px;}
+
+
+
+/* 공지사항/배너 */
+#wrap #center .contents{width: 1200px; height: 325px;}
+
+/* 공지사항(전체레이아웃+h2글씨+ul(상하좌우여백)+li(밑줄점선,밑줄여백) */
+#wrap #center .contents .notice{width: 600px; height: 325px; float: left;}
+#wrap #center .contents .notice h2{margin: 30px 0 30px 30px;}
+#wrap #center .contents .notice ul{margin: 0 30px 0 30px;}
+#wrap #center .contents .notice ul li{height: 28px; line-height: 28px; border-bottom: 1px dashed #ccc;}
+/* 공지사항링크글씨(글씨크기+상호작용밑줄추가,글씨색변경+날짜오른쪽정렬) */
+#wrap #center .contents .notice ul li a{font-size: 14px;}
+#wrap #center .contents .notice ul li a:hover{text-decoration: underline; color: #999;}
+#wrap #center .contents .notice ul li span{color: #999; float: right;}
+/* 베너(왼쪽정렬) */
+#wrap #center .contents .banner{width: 600px; height: 325px; float: left;}
+
+/* 푸터 */
+#wrap footer{width: 1200px; height: 100px; border-top: 1px solid #999;}
+/* 하단로고(레이아웃크기,좌우정렬)+하단로고이미지(크기,상단여백) */
+#wrap footer .blogo{width: 200px; height: 100px; float: left;}
+#wrap footer .blogo img{width: 150px; margin-top: 25px;}
+/* 하단주소(레이아웃크기,좌우정렬+문단글씨크기,정렬) */
+#wrap footer .copyright{width: 800px; height: 100px; float: left;}
+#wrap footer .copyright p{margin-top: 35px; text-align: center; font-size: 14px; 
+    color: #666; line-height: 1.7;}
+/* 하단sns아이콘(전체레이아웃,정렬+이미지위치,정렬+이미지사이즈) */
+#wrap footer .sns{width: 200px; height: 100px; float: left;}
+#wrap footer .sns ul{display: flex; justify-content: space-between; margin-top: 35px;}
+#wrap footer .sns img{width: 30px;}
